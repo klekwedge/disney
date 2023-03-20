@@ -1,7 +1,17 @@
-<script setup lang="ts">
-</script>
+<template>
+    <List/>
+</template>
 
-<template>Nice</template>
+<script lang="ts">
+import List from "./components/List/List.vue";
+
+export default {
+  name: "App",
+  components: {
+    List,
+  },
+};
+</script>
 
 <style scoped>
 </style>
