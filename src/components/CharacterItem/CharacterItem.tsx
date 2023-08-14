@@ -1,14 +1,11 @@
 import { Anchor, Badge, Card, Flex, Group, Image, Text } from '@mantine/core';
 import ICharacter from '../../types/character';
-import './CharacterItem.scss';
 
 interface CharacterItemProps {
   character: ICharacter;
 }
 
 function CharacterItem({ character }: CharacterItemProps) {
-  console.log(character);
-
   return (
     <Card className='character' maw="250px" mah='250px' hidden shadow="sm" padding="lg" radius="md" withBorder w="100%">
       <Card.Section>

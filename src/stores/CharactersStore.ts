@@ -2,9 +2,10 @@
 import { makeAutoObservable, runInAction } from "mobx";
 import { queryAllCharacers } from "../query";
 import { fetchAllCharacters } from "../services/DisneyApi";
+import ICharacter from "../types/character";
 
 class CharactersStore{
-    characters = [];
+    characters:ICharacter[] = [];
 
     isLoading = false;
 
@@ -12,10 +13,10 @@ class CharactersStore{
         makeAutoObservable(this)
     }
 
-    getAllCharacters = async () => {
+    getAllCharacters = async (page: number) => {
 
         this.isLoading = true
-        const res = await fetchAllCharacters(queryAllCharacers(1, 50))
+        const res = await fetchAllCharacters(queryAllCharacers(page, 50))
 
         runInAction(() => {
             this.characters = res;
