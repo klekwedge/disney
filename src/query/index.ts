@@ -4,6 +4,7 @@ export const queryAllCharacers = (page: number, pageSize: number) => `query AllC
         _id
         url
         name
+        imageUrl
         sourceUrl
         films
       }

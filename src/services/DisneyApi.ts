@@ -1,14 +1,15 @@
 const url = "https://api.disneyapi.dev/graphql";
 
-const getAllCharacers = (query: string) => fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-type": "application/json"
-    },
-    body: JSON.stringify({ query })
-  }).then((res) => res.json());
+export const fetchAllCharacters = (query: string) => fetch(url, {
+  method: "POST",
+  headers: {
+    "Content-type": "application/json"
+  },
+  body: JSON.stringify({ query })
+}).then((res) => res.json()).then((res) => res.data.characters.items);
 
 
+export const a = 5;
 // async function findTodos(e) {
 //   e.preventDefault();
 //   const searchText = searchForm.searchname.value;
@@ -41,4 +42,4 @@ const getAllCharacers = (query: string) => fetch(url, {
 //   return { getAllCharacers };
 // };
 
-export default getAllCharacers;
+// export default getAllCharacers;
