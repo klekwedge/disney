@@ -1,4 +1,4 @@
-import { Anchor, Badge, Button, Card, Flex, Group, Image, Space, Text } from '@mantine/core';
+import { Anchor, Badge, Card, Flex, Group, Image, Text } from '@mantine/core';
 import ICharacter from '../../types/character';
 import './CharacterItem.scss';
 
@@ -10,22 +10,17 @@ function CharacterItem({ character }: CharacterItemProps) {
   console.log(character);
 
   return (
-    <Card className='character' maw="250px" shadow="sm" padding="lg" radius="md" withBorder w="100%">
+    <Card className='character' maw="250px" mah='250px' hidden shadow="sm" padding="lg" radius="md" withBorder w="100%">
       <Card.Section>
         <Image src={character.imageUrl} alt="Character" height="160px" />
       </Card.Section>
 
       <Group position="apart" mt="md" mb="xs">
-        <Text weight={500}>Name: {character.name}</Text>
+        <Text weight={500}>{character.name}</Text>
         <Flex gap="5px" justify="center" align="flex-start" wrap="wrap">
           <Badge>
             <Anchor href={character.sourceUrl} target="_blank" variant="light" color="blue">
               Source
-            </Anchor>
-          </Badge>
-          <Badge>
-            <Anchor href={character.url} target="_blank" variant="light" color="blue">
-              Url
             </Anchor>
           </Badge>
         </Flex>

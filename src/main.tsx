@@ -4,7 +4,11 @@ import App from './components/App/App';
 import './main.scss';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <MantineProvider>
+  <MantineProvider
+    theme={{
+      colorScheme: 'dark',
+    }}
+  >
     <App />
   </MantineProvider>,
 );
