@@ -14,7 +14,6 @@ class CharactersStore{
     }
 
     getAllCharacters = async (page: number) => {
-
         this.isLoading = true
         const res = await fetchAllCharacters(queryAllCharacers(page, 50))
 
