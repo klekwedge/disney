@@ -17,7 +17,7 @@
 
 **To run the project, you need to have [npm](https://nodejs.org/en/) and [git](https://git-scm.com/downloads) installed on your computer**
 
-1. Make a clone of this repository ```git clone https://github.com/klekwedge/example.git```
+1. Make a clone of this repository ```git clone https://github.com/klekwedge/disney.git```
 2. Install all required npm packages with ```npm i```
 3. Run the project with the command ```npm run dev```
 
@@ -29,8 +29,8 @@
 
 ### Links
 
-- [Solution URL](https://github.com/klekwedge/example)
-- [Live Site URL](https://klekwedge-example.vercel.app/)
+- [Solution URL](https://github.com/klekwedge/disney)
+- [Live Site URL](https://klekwedge-disney.vercel.app/)
 
 ## My process
 
